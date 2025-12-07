@@ -75,9 +75,8 @@ if st.sidebar.button("Analyze Inventory", type="primary"):
     st.write(f"DEBUG: Connecting to {base_url}")
     # Call the API
     try:
-        response = requests.get(
-            f"http://127.0.0.1:8000/predict?current_stock={curr_stock}&lead_time={lead_time}"
-        )
+        # CHANGE TO:
+        response = requests.get(f"{base_url}/predict?current_stock={curr_stock}&lead_time={lead_time}")
         data = response.json()
         
         # --- UI LAYOUT ---
