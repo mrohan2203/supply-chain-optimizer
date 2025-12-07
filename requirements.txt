@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+prophet
+streamlit
+joblib
+sqlalchemy
+pydantic
+plotly
