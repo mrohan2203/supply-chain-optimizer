@@ -67,8 +67,11 @@ st.title("📦 AI Supply Chain Optimizer")
 st.markdown("Real-time inventory intelligence and forecasting.")
 
 if st.sidebar.button("Analyze Inventory", type="primary"):
-    # Get the URL from environment, or default to localhost
-    base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+    # Try to get the URL from Streamlit Secrets first, then os.getenv, then default
+    if "BACKEND_URL" in st.secrets:
+        base_url = st.secrets["BACKEND_URL"]
+    else:
+        base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
     # Call the API
     try:
         response = requests.get(
