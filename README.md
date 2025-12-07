@@ -9,6 +9,8 @@
 
 An end-to-end **Inventory Optimization System** that uses Machine Learning to predict demand and automate inventory decisions. This tool helps supply chain managers prevent **stockouts** and reduce **overstock** by calculating dynamic Safety Stock levels and Reorder Points based on probabilistic forecasts.
 
+Access the app at: https://supply-chain-optimizer-evt3opmyu8n7y9thez8gfh.streamlit.app/
+
 ---
 
 ## 🚀 Features
