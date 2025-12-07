@@ -72,7 +72,6 @@ if st.sidebar.button("Analyze Inventory", type="primary"):
         base_url = st.secrets["BACKEND_URL"]
     else:
         base_url = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
-    st.write(f"DEBUG: Connecting to {base_url}")
     # Call the API
     try:
         # CHANGE TO:
